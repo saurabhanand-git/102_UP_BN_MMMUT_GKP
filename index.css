@@ -16,26 +16,73 @@ body{
     background-color: rgba(240, 248, 255, 0.863);
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     overflow: hidden;
+    
     padding: 20px 10px;
     
 }
+.navbar > div{
+    flex: 50%;
+}
+.navbar div.navbar_left{
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
 
-.navbar a{
+.navbar div.navbar_left a.logo{
     display: block;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-size: 2.5rem;
+    background-image: url("NCC\ image.png");  
+    width: 68px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px 10px 20px;
+    /* padding: 20px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar div.navbar_left div.logo_text a{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
     color: black;
-    text-align: center;
-    margin: auto;
-    z-index: 1;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+.navbar div.navbar_right div.bnname{
+    display: block;
+    padding: 10px;
+}
+.navbar div.navbar_right div.bnname a{
+       /* display: block; */
+       position: relative;
+       text-decoration: none;
+       text-align: center;
+       color: black;
+       padding: 10px 10px 3px 10px;
+       font-weight: 500;
+       font-size: 3em; 
+}
+.navbar div.navbar_right div.bnname a.middle::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out;
+}
+.navbar div.navbar_right div.bnname a.middle:hover::before{
+    visibility: visible;
+  transform: scaleX(1);
 }
 
-.navbar a:hover{
-    color: red;
-}
 
 
                                      /* For Desktop ends */
@@ -43,7 +90,33 @@ body{
                                   /* For Tablet begin */
 
 @media screen  and (min-width:576px) and (max-width:910px){
-        
+    .navbar div.navbar_left a.logo{
+        display: block;
+        background-image: url("NCC\ image\ tab.png");  
+        width: 58px;
+        height: 75px;
+        float: left;
+        margin: 10px 10px 10px 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .navbar div.navbar_left div.logo_text a{
+        display: block;
+        color: black;
+        margin: 7px;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    .navbar div.navbar_right div.bnname{
+       
+        padding: 5px;
+    }
+    .navbar div.navbar_right div.bnname a{
+          
+           font-weight: 400;
+           font-size: 2em; 
+    }
+    
 }
 
                                     /* For Tablet ends */
@@ -51,7 +124,32 @@ body{
                                   /* for Mobile begins  */
 
 @media screen and (min-width:320px) and (max-width:575px){
-                    .navbar a{
-                        font-size: 1.5rem;
+                  
+                    .navbar div.navbar_left a.logo{
+                        display: block;
+                        background-image: url("NCC\ inage\ mob.png") ;
+                        background-repeat: no-repeat;  
+                        width: 58px;
+                        height: 75px;
+                        float: left;
+                        margin: auto;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                     }
-}
+                    .navbar div.navbar_left div.logo_text a{
+                        display: block;
+                        color: black;
+                        margin: auto;
+                        text-decoration: none;
+                        font-weight: 300;
+                        font-size: 1rem;
+                    }
+                    .navbar div.navbar_right div.bnname{
+                        display: block;
+                        padding: 5px;
+                    }
+                    .navbar div.navbar_right div.bnname a{
+                          margin: auto;
+                           font-weight: 300;
+                           font-size: 1.05rem; 
+                    }
+                }
