@@ -138,18 +138,19 @@ body{
                     .navbar div.navbar_left div.logo_text a{
                         display: block;
                         color: black;
-                        margin: auto;
+                        margin: 0 0 0 4px;
                         text-decoration: none;
-                        font-weight: 300;
-                        font-size: 1rem;
+                        font-weight: 500;
+                        font-size: 1em;
                     }
                     .navbar div.navbar_right div.bnname{
                         display: block;
                         padding: 5px;
                     }
                     .navbar div.navbar_right div.bnname a{
-                          margin: auto;
-                           font-weight: 300;
-                           font-size: 1.05rem; 
+                          margin: 0;
+                          padding: 0;
+                           font-weight: 500;
+                           font-size: 1.05em; 
                     }
                 }
